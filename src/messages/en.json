@@ -1,6 +1,9 @@
 {
-    "HomePage": {
-      "title": "Hello world!",
-      "about": "Go to the about page"
-    }
+  "global": {
+    "language": "Language",
+    "currency": "Currency",
+    "search": "Search",
+    "vietnamese": "Vietnamese",
+    "english": "English"
   }
+}

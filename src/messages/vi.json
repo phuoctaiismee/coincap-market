@@ -1,6 +1,9 @@
 {
-    "HomePage": {
-        "title": "Chào mừng đến với trang chủ",
-        "about": "Đi đến trang về chúng tôi"
-    }
+  "global": {
+    "language": "Ngôn ngữ",
+    "currency": "Tiền tệ",
+    "search": "Tìm kiếm",
+    "vietnamese": "Tiếng Việt",
+    "english": "Tiếng Anh"
+  }
 }
