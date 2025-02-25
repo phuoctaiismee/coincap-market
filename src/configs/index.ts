@@ -14,10 +14,6 @@ export const COMMON_DATA = {
           href: "#",
         },
         {
-          label: "Exchanges",
-          href: "exchange",
-        },
-        {
           label: "NFTs",
           href: "#",
         },
@@ -28,16 +24,28 @@ export const COMMON_DATA = {
       href: "#",
       children: [
         {
-          label: "Coins",
-          href: "#",
+          label: "Spot",
+          href: "/exchange/spot",
         },
         {
-          label: "Exchanges",
-          href: "#",
+          label: "Derivatives",
+          href: "/exchange/derivatives",
         },
         {
-          label: "NFTs",
-          href: "#",
+          label: "DEX Spot",
+          href: "/exchange/dex-spot",
+        },
+        {
+          label: "DEX Derivatives",
+          href: "/exchange/dex-derivatives",
+        },
+        {
+          label: "Lending",
+          href: "/exchange/lending",
+        },
+        {
+          label: "About",
+          href: "/exchange/about",
         },
       ],
     },

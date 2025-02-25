@@ -81,7 +81,7 @@ export default async function RootLayout({
       lang={headersList.get("x-site-locale") ?? "en-US"}
       suppressHydrationWarning
     >
-      <body className={`${sf_pro_display.className} antialiased bg-[#F9F9F9]`}>
+      <body className={`${sf_pro_display.className} antialiased bg-[#F9F9F9] relative`}>
         <GlobalRootLayout>{children}</GlobalRootLayout>
       </body>
     </html>
