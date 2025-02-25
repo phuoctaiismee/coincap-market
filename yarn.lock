@@ -3676,6 +3676,11 @@ set-function-name@^2.0.2:
     functions-have-names "^1.2.3"
     has-property-descriptors "^1.0.2"
 
+sf-pro@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/sf-pro/-/sf-pro-1.0.3.tgz#e5086c07630af74d6339de1a9d0fbb742923c418"
+  integrity sha512-e6RV8kwFmBbmBJJ6tQ9Ady5287Ypr3kv2LnX/wCSx4xvVxmFnyK0u5GapU3A8e+h9fiVqEKLJawa0zWlJTZASw==
+
 sharp@^0.33.5:
   version "0.33.5"
   resolved "https://registry.yarnpkg.com/sharp/-/sharp-0.33.5.tgz#13e0e4130cc309d6a9497596715240b2ec0c594e"

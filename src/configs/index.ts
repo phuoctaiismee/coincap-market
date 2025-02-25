@@ -51,7 +51,7 @@ export const COMMON_DATA = {
     },
     {
       label: "News",
-      href: "#",
+      href: "/news",
     },
   ],
   stats: [

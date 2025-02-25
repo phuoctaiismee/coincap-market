@@ -67,6 +67,7 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        blueDarkPrimary: "#00359E",
       },
       boxShadow: {
         primary: "0px 12px 48px 0px rgba(0, 0, 0, 0.12)",
@@ -120,6 +121,9 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         shine: "shine var(--duration) infinite linear",
       },
+    },
+    fontFamily: {
+      sf: ["SF Pro Display", "sans-serif"],
     },
   },
   plugins: [require("tailwindcss-animate"), require("tailwind-scrollbar")],
