@@ -13,6 +13,10 @@ export default {
   theme: {
     extend: {
       colors: {
+        "neutral-01": "#000000",
+        "neutral-04": "#6D6D6D",
+        "neutral-05": "#B1B1B1",
+        "primary-light": "#0077ED",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -64,6 +68,9 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
       },
+      boxShadow: {
+        primary: "0px 12px 48px 0px rgba(0, 0, 0, 0.12)",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -71,9 +78,12 @@ export default {
       },
       container: {
         center: true,
+        screens: {
+          "2xl": "1400px",
+        },
         padding: {
           DEFAULT: "1rem",
-          "2xl": "8rem",
+          //   "2xl": "8rem",
         },
       },
       keyframes: {
@@ -112,5 +122,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("tailwind-scrollbar")],
 } satisfies Config;

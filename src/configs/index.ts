@@ -174,4 +174,46 @@ export const COMMON_DATA = {
       },
     ],
   },
+  exchange: {
+    tabs: [
+      {
+        label: "Spot",
+        href: "/exchange/spot",
+      },
+      {
+        label: "Derivatives",
+        href: "/exchange/derivatives",
+      },
+      {
+        label: "DEX Spot",
+        href: "/exchange/dex-spot",
+      },
+      {
+        label: "DEX Derivatives",
+        href: "/exchange/dex-derivatives",
+      },
+      {
+        label: "Lending",
+        href: "/exchange/lending",
+      },
+    ],
+    detail_tabs: [
+      {
+        label: "About Binance",
+        href: "/exchange/about",
+      },
+      {
+        label: "Financial reserves",
+        href: "/exchange/financial-reserves",
+      },
+      {
+        label: "Token Allocation",
+        href: "/exchange/token-allocation",
+      },
+      {
+        label: "Spot Markets",
+        href: "/exchange/spot-markets",
+      },
+    ],
+  },
 };
