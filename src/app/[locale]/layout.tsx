@@ -15,9 +15,8 @@ export default async function LocaleLayout({
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }
-
   return (
-    <IntlProvider>
+    <IntlProvider locale={locale}>
       <SiteHeader />
       {children}
       <SiteFooter />

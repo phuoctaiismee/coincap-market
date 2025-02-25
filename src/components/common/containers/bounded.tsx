@@ -12,8 +12,9 @@ const Bounded = ({
     children,
     ...restProps
 }: BoundedProps) => {
+    const restPropsElement = restProps;
     return (
-        <Component {...restProps} className={cn("container mx-auto", className)}>
+        <Component {...restPropsElement} className={cn("container mx-auto", className)}>
             {children}
         </Component>
     );

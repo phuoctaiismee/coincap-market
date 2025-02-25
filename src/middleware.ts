@@ -9,11 +9,13 @@ export default async function customMiddleware(req: NextRequest) {
 
   // Your custom code here
   const acceptLang = req.headers.get("accept-language");
-  response.headers.set("x-site-locale", acceptLang ?? "en");
+  // Lấy ngôn ngữ ưu tiên nhất từ chuỗi
+  const preferredLang = acceptLang?.split(",")[0].split(";")[0];
+  response.headers.set("x-site-locale", preferredLang ?? "en");
 
   return response;
 }
 
 export const config = {
-  matcher: ["/", "/(en|vi)/:path*"],
+  matcher: ["/", "/(en|vi)/:path*", "/((?!_next|_vercel|.*\\..*).*)"],
 };

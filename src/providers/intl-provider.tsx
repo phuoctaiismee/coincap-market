@@ -1,10 +1,16 @@
 import { NextIntlClientProvider } from "next-intl";
 import { useMessages } from "next-intl";
 
-const IntlProvider = ({ children }: { children: React.ReactNode }) => {
+const IntlProvider = ({
+  children,
+  locale,
+}: {
+  children: React.ReactNode;
+  locale: string;
+}) => {
   const messages = useMessages();
   return (
-    <NextIntlClientProvider messages={messages}>
+    <NextIntlClientProvider messages={messages} locale={locale}>
       {children}
     </NextIntlClientProvider>
   );
