@@ -12,7 +12,21 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        SFProDisplay: ["SF Pro Display", "sans-serif"],
+      },
       colors: {
+        "neutral-00": "#000000",
+        "neutral-01": "#141416",
+        "neutral-02": "#2b2b2b",
+        "neutral-03": "#464646",
+        "neutral-04": "#6d6d6d",
+        "neutral-05": "#B1B1B1",
+        "gray-01": "#636363",
+        "blue-primary": "#00359E",
+        "blue-dark": "#00359e",
+        "greenish-04": "#2DA262",
+        "red-04": "#CB3232",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -69,13 +83,6 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
-      container: {
-        center: true,
-        padding: {
-          DEFAULT: "1rem",
-          "2xl": "8rem",
-        },
-      },
       keyframes: {
         "accordion-down": {
           from: {
@@ -93,24 +100,89 @@ export default {
             height: "0",
           },
         },
-        shine: {
-          "0%": {
-            "background-position": "0% 0%",
-          },
-          "50%": {
-            "background-position": "100% 100%",
-          },
-          to: {
-            "background-position": "0% 0%",
-          },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        shine: "shine var(--duration) infinite linear",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("@tailwindcss/typography"),
+    function ({ addComponents }: any) {
+      addComponents({
+        ".text-16-20-600": {
+          fontSize: "16px",
+          fontWeight: "600",
+          lineHeight: "20px",
+        },
+        ".text-16-20-700": {
+          fontSize: "16px",
+          fontWeight: "700",
+          lineHeight: "20px",
+        },
+        ".text-32-32-600": {
+          fontSize: "32px",
+          fontWeight: "600",
+          lineHeight: "32px",
+        },
+        ".text-15-20-600": {
+          fontSize: "15px",
+          fontWeight: "600",
+          lineHeight: "20px",
+        },
+        ".text-13-20-600": {
+          fontSize: "13px",
+          fontWeight: "600",
+          lineHeight: "20px",
+        },
+        ".text-14-18-500": {
+          fontSize: "14px",
+          fontWeight: "500",
+          lineHeight: "18px",
+        },
+        ".text-14-18-600": {
+          fontSize: "14px",
+          fontWeight: "600",
+          lineHeight: "18px",
+        },
+        ".text-11-15-600": {
+          fontSize: "11px",
+          fontWeight: "600",
+          lineHeight: "15px",
+        },
+        ".text-36-54-700": {
+          fontSize: "36px",
+          fontWeight: "700",
+          lineHeight: "54px",
+        },
+        ".text-14-21-500": {
+          fontSize: "14px",
+          fontWeight: "500",
+          lineHeight: "21px",
+        },
+        ".text-12-18-600": {
+          fontSize: "12px",
+          fontWeight: "600",
+          lineHeight: "18px",
+        },
+        ".text-16-24-600": {
+          fontSize: "16px",
+          fontWeight: "600",
+          lineHeight: "24px",
+        },
+        ".text-36-47-700": {
+          fontSize: "36px",
+          fontWeight: "700",
+          lineHeight: "47px",
+        },
+        ".text-16-16-600": {
+          fontSize: "16px",
+          fontWeight: "600",
+          lineHeight: "16px",
+        },
+      });
+    },
+  ],
 } satisfies Config;

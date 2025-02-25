@@ -1,9 +1,8 @@
-import type { Metadata } from "next";
-import "./globals.css";
 import GlobalRootLayout from "@/layouts/root-layout";
-import { getMessages } from "next-intl/server";
-import { headers } from "next/headers";
+import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { headers } from "next/headers";
+import "./globals.css";
 const sf_pro_display = localFont({
   src: [
     {
