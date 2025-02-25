@@ -2,6 +2,7 @@ import { IGlobalLayoutProps } from "@/types";
 import StoreProvider from "./store-provider";
 import { ThemeProvider } from "./theme-provider";
 import LenisProvider from "./lenis-provider";
+import NextTopLoader from "nextjs-toploader";
 
 export const AppProvider = ({ children }: IGlobalLayoutProps) => {
   return (
@@ -13,6 +14,7 @@ export const AppProvider = ({ children }: IGlobalLayoutProps) => {
           enableSystem
           disableTransitionOnChange
         >
+          <NextTopLoader showSpinner={false} color="#00359E" />
           {children}
         </ThemeProvider>
       </LenisProvider>

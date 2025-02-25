@@ -11,14 +11,14 @@ const Paragraph = ({
   as: Component = "p",
   className,
   children,
-  size = "md",
+  size = "sm",
   ...restProps
 }: ParagraphProps) => {
   return (
     <Component
       {...restProps}
       className={cn(
-        "font-medium block text-[#6D6D6D] dark:text-[#6D6D6D]/40",
+        "font-medium block text-neutral-04 dark:text-neutral-04/40",
         size === "xl" && "text-xl md:text-3xl",
         size === "lg" && "text-lg md:text-2xl",
         size === "md" && "text-base sm:text-xl",

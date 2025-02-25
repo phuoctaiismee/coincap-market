@@ -16,8 +16,7 @@ export default {
         SFProDisplay: ["SF Pro Display", "sans-serif"],
       },
       colors: {
-        "neutral-00": "#000000",
-        "neutral-01": "#141416",
+        "neutral-06": "#141416",
         "neutral-02": "#2b2b2b",
         "neutral-03": "#464646",
         "neutral-04": "#6d6d6d",
@@ -27,6 +26,8 @@ export default {
         "blue-dark": "#00359e",
         "greenish-04": "#2DA262",
         "red-04": "#CB3232",
+        "neutral-01": "#000000",
+        "primary-light": "#0077ED",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -77,11 +78,25 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        blueDarkPrimary: "#00359E",
+      },
+      boxShadow: {
+        primary: "0px 12px 48px 0px rgba(0, 0, 0, 0.12)",
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      container: {
+        center: true,
+        screens: {
+          "2xl": "1400px",
+        },
+        padding: {
+          DEFAULT: "1rem",
+          //   "2xl": "8rem",
+        },
       },
       keyframes: {
         "accordion-down": {
@@ -106,10 +121,14 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
+    fontFamily: {
+      sf: ["SF Pro Display", "sans-serif"],
+    },
   },
   plugins: [
     require("tailwindcss-animate"),
     require("@tailwindcss/typography"),
+    require("tailwind-scrollbar"),
     function ({ addComponents }: any) {
       addComponents({
         ".text-16-20-600": {
