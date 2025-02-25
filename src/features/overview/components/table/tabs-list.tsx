@@ -27,7 +27,7 @@ const TabsList = () => {
         >
           {i}
           {i === activeTab && (
-            <div className="absolute w-full h-[2px] bottom-0 left-0 bg-neutral-00" />
+            <div className="absolute w-full h-[2px] bottom-0 left-0 bg-neutral-01" />
           )}
         </div>
       ))}

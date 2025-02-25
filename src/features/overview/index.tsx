@@ -1,6 +1,7 @@
 import Bounded from "@/components/common/containers/bounded";
 import FilterActions from "./components/table/filter-actions";
 import TabsList from "./components/table/tabs-list";
+import TokenTables from "./components/table/tokens-table";
 import CryptoCard from "./components/ui/crypto-card ";
 import Heading from "./components/ui/heading";
 import TradingTokenCard from "./components/ui/trading-token-card";
@@ -42,7 +43,7 @@ const Overview = () => {
           <TradingTokenCard />
         </div>
       </div>
-      <div className="py-[48px]">
+      <div className="py-[48px] space-y-[36px]">
         <div className="space-y-[8px] relative">
           <div className="text-neutral-04 text-16-24-600">
             Uncover promising coins & big opportunities!
@@ -55,6 +56,7 @@ const Overview = () => {
             <FilterActions />
           </div>
         </div>
+        <TokenTables />
       </div>
     </Bounded>
   );

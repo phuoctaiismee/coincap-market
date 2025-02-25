@@ -1,6 +1,8 @@
+import bitcoinIcon from "@/assets/icons/bitcoin-icon.svg";
 import { cn } from "@/lib/utils";
 import { formatCurrency } from "@/utils/format/currency.util";
 import { Dot, MoveDownLeft, MoveUpRight } from "lucide-react";
+import Image from "next/image";
 
 interface IProps {
   className?: string;
@@ -40,7 +42,7 @@ const CryptoCard: React.FC<IProps> = ({
       )}
     >
       <div className="gap-[16px] flex py-[16px] px-[20px] rounded-full bg-white">
-        <div className="size-[60px] rounded-full bg-red-100"></div>
+        <Image src={bitcoinIcon} alt="coin" width={60} height={60} />
         <div className="space-y-[8px]">
           <div className="gap-[2px] flex items-center">
             <span className="text-neutral-03 text-16-20-600">{name}</span>
@@ -61,9 +63,10 @@ const CryptoCard: React.FC<IProps> = ({
 
               <span>{formatCurrency(changePercent)}%</span>
               <Dot size={20} className="opacity-50" />
-              <span>
-                {isUp ? "+" : "-"} ${formatCurrency(changeAmount)}
-              </span>
+              <div className="flex gap-1">
+                <span>{isUp ? "+" : "-"}</span>
+                <span>${formatCurrency(changeAmount)}</span>
+              </div>
             </div>
           </div>
         </div>
