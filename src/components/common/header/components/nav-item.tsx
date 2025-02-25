@@ -17,16 +17,19 @@ const NavItem = ({ href, label, children }: LinkItem) => {
     return (
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="ghost" className="px-0 hover:bg-transparent text-[#6D6D6D]">
+          <Button
+            variant="ghost"
+            className="px-0 hover:bg-transparent text-[#6D6D6D]"
+          >
             {label}
             <ChevronDown className="w-4 h-4 fill-current" />
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent>
           {children?.map((child) => (
-            <DropdownMenuItem key={child.label}>
-              <Link href={child.href}>{child.label}</Link>
-            </DropdownMenuItem>
+            <Link href={child.href} key={child.label}  className="hover:cursor cursor-pointer hover:bg-gray-100">
+              <DropdownMenuItem>{child.label}</DropdownMenuItem>
+            </Link>
           ))}
         </DropdownMenuContent>
       </DropdownMenu>

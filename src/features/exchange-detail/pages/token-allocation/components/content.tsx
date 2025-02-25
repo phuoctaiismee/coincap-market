@@ -5,6 +5,7 @@ import { RefreshCw } from "lucide-react";
 import React from "react";
 import PaginationInfo from "@/components/common/pagination/pagination-info";
 import { Pagination } from "@/components/common/pagination/pagination";
+import Image from "next/image";
 
 const ExchangeTokenAllocationContent = () => {
   return (
@@ -20,8 +21,15 @@ const ExchangeTokenAllocationContent = () => {
           </Button>
         </div>
       </div>
-      <div className="p-20 rounded-3xl shadow-primary flex items-center justify-center">
-        Chart
+      <div className="px-20 py-4 rounded-3xl shadow-primary flex items-center justify-center">
+        <div className="relative w-full h-[440px]">
+          <Image
+            src="/images/pie-chart.png"
+            alt="token-allocation-chart"
+            fill
+            className="object-cover"
+          />
+        </div>
       </div>
       <p className="text-sm italic text-[#636363]">
         All information and data relating to the holdings in the third-party

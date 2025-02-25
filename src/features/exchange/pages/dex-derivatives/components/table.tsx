@@ -5,7 +5,7 @@ import { format } from "date-fns";
 import Image from "next/image";
 import { Line, LineChart } from "recharts";
 
-const TableDEXSpot = () => {
+const TableDEXDerivatives = () => {
   const data = [
     {
       networks: {
@@ -157,4 +157,4 @@ const TableDEXSpot = () => {
   return <DataTable columns={columns} data={data} showIndex />;
 };
 
-export default TableDEXSpot;
+export default TableDEXDerivatives;

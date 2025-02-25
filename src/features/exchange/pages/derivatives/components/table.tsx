@@ -1,6 +1,7 @@
 import { DataTable } from "@/components/common/table/table-tanstack-core";
 import { formatCurrency } from "@/utils/currency";
 import { ColumnDef } from "@tanstack/react-table";
+import { format } from "date-fns";
 import Image from "next/image";
 
 const TableDerivatives = () => {
@@ -116,13 +117,13 @@ const TableDerivatives = () => {
       cell: ({ row }) => {
         return (
           <p className="text-sm text-neutral-01 font-medium">
-            {row.original.lauched}
+            {format(new Date(row.original.lauched), "MMM yyyy")}
           </p>
         );
       },
     },
   ];
-  return <DataTable columns={columns} data={data} />;
+  return <DataTable columns={columns} data={data} showIndex />;
 };
 
 export default TableDerivatives;

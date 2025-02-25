@@ -7,6 +7,8 @@ import { ExchangeFinacialReservesFeatures } from "@/features/exchange-detail";
 import { ExchangeAboutFeatures } from "@/features/exchange-detail";
 import ExchangeSpotMarketsFeatures from "@/features/exchange-detail/pages/spot-markets";
 import ExchangeTokenAllocationFeatures from "@/features/exchange-detail/pages/token-allocation";
+import ExchangeDEXDerivativesFeatures from "@/features/exchange/pages/dex-derivatives";
+import ExchangeLendingFeatures from "@/features/exchange/pages/lending";
 
 import { notFound, redirect } from "next/navigation";
 import { JSX } from "react";
@@ -29,8 +31,8 @@ const ExchangeDynamicSlugPage = async ({
     spot: <ExchangeSpotFeatures />,
     derivatives: <ExchangeDerivativesFeatures />,
     "dex-spot": <ExchangeDEXSpotFeatures />,
-    "dex-derivatives": <div>DEX Derivatives</div>,
-    lending: <div>Lending</div>,
+    "dex-derivatives": <ExchangeDEXDerivativesFeatures />,
+    lending: <ExchangeLendingFeatures />,
     // EXCHANGE DETAIL
     about: <ExchangeAboutFeatures />,
     "financial-reserves": <ExchangeFinacialReservesFeatures />,
