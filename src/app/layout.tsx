@@ -72,10 +72,10 @@ export default async function RootLayout({
   params: { locale: string };
 }>) {
   const headersList = await headers();
-  
+
   // Enable static params
   setRequestLocale(locale);
-  
+
   return (
     <html
       lang={headersList.get("x-site-locale") ?? "en-US"}
