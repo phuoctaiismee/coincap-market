@@ -30,7 +30,6 @@ export default {
         "blue-dark": "#00359e",
         "greenish-04": "#2DA262",
         "red-04": "#CB3232",
-        "neutral-06": "#E6E6E6",
         "primary-light": "#0077ED",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
