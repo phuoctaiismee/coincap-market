@@ -62,7 +62,7 @@ const SearchInput = ({
         </div>
         <Input
           className={cn(
-            "border-none text-sm shadow-none outline-none placeholder:text-sm placeholder:text-neutral-400 focus:ring-0 focus-visible:border-none focus-visible:outline-none focus-visible:ring-0 md:text-base",
+            "border-none bg-transparent text-sm shadow-none outline-none placeholder:text-sm placeholder:text-neutral-400 focus:ring-0 focus-visible:border-none focus-visible:outline-none focus-visible:ring-0 md:text-base",
             inputClassName
           )}
           placeholder="Search posts or users..."

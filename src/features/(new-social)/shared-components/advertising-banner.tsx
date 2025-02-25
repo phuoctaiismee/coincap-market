@@ -4,7 +4,7 @@ import OutlineButton from "./outline-button";
 const AdvertisingBanner = () => {
   return (
     <div className="rounded-3xl w-full p-4 bg-gradient-to-r from-[#0077ED] to-[#5BADFF]">
-      <div className="w-full flex flex-col gap-6">
+      <div className="w-full flex flex-col gap-3">
         <div className="w-full flex justify-between items-center">
           <div className="flex items-center gap-2">
             <LightIcon />

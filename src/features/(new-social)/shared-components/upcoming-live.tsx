@@ -4,8 +4,16 @@ import React from "react";
 
 export const UpcomingLive = () => {
   return (
-    <div className="w-full bg-gradient-to-b from-[#E5EFF8] to-[#D4EBFF] rounded-xl p-3">
-      <div className="flex flex-col gap-3">
+    <div className="w-full relative hover:shadow-xl bg-gradient-to-b from-[#E5EFF8] to-[#D4EBFF] rounded-xl p-3">
+      {/* Background */}
+      <Image
+        src="/assets/images/socials/f5413985315fe1648fbba99dc2f660a7.png"
+        alt="Blended Image"
+        className="absolute z-[1] inset-0 w-full h-full object-cover mix-blend-multiply opacity-20 rounded-xl"
+      />
+
+      {/*  */}
+      <div className="z-30 relative flex flex-col gap-3">
         <div className="flex items-center gap-1">
           <svg
             width="20"

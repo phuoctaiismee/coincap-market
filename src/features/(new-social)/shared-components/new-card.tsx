@@ -24,7 +24,7 @@ const NewCard = () => {
             className="size-6 object-cover"
             loading="lazy"
           />
-          <span className="text-black font-medium">CryptosRUs</span>
+          <span className="text-black text-sm font-medium">CryptosRUs</span>
           <svg
             width="16"
             height="16"
@@ -50,7 +50,7 @@ const NewCard = () => {
             </g>
           </svg>
 
-          <span className="text-neutral-400 font-medium">@CryptosRUs</span>
+          <span className="text-[#6D6D6D] text-sm">@CryptosRUs</span>
           <span>
             <svg
               width="3"
@@ -62,7 +62,7 @@ const NewCard = () => {
               <circle cx="1.5" cy="2" r="1.5" fill="#D9D9D9" />
             </svg>
           </span>
-          <span className="text-neutral-400">4 hour</span>
+          <span className="text-sm text-[#939393]">4 hour</span>
         </div>
         <OutlineButton className="font-semibold">
           <span className="flex items-center gap-2">
@@ -211,7 +211,7 @@ type EmojiButton = {
 
 const EmojiButton = ({ children, icon }: EmojiButton) => {
   return (
-    <div className="flex items-center gap-1 rounded-full p-1 bg-[#0077ED14]">
+    <div className="flex items-center gap-1 rounded-full py-1 px-2 bg-[#0077ED14]">
       {icon}
       <span className="text-sm font-medium">{children}</span>
     </div>

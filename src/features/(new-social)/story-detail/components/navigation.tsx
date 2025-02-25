@@ -1,5 +1,6 @@
 import React from "react";
 import { RecommendAccount } from "../../shared-components/recommended-account";
+import { Link } from "@/i18n/routing";
 
 const SOCIAL = [
   {
@@ -189,13 +190,13 @@ export const StoryDetailNavigation = () => {
             </span>
           </div>
           {SOCIAL?.map((social) => (
-            <div key={social?.id} className="flex items-center gap-4">
+            <Link href="#" key={social?.id} className="flex items-center gap-4">
               {social?.icon}
 
               <span className="text-[#6D6D6D] font-medium text-sm">
                 {social?.name}
               </span>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

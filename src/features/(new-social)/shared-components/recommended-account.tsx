@@ -1,3 +1,4 @@
+import { Link } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React from "react";
@@ -64,18 +65,23 @@ export const RecommendAccount = ({
               className="flex items-center justify-between"
             >
               <div className="flex items-center gap-2">
-                <Image
-                  src={trending.image}
-                  alt={trending?.name}
-                  width={20}
-                  height={20}
-                  loading="lazy"
-                />
+                <Link href="#">
+                  <Image
+                    src={trending.image}
+                    alt={trending?.name}
+                    width={20}
+                    height={20}
+                    loading="lazy"
+                  />
+                </Link>
                 <div className="flex flex-col gap-0">
                   <div className="flex items-center gap-2">
-                    <span className="text-sm text-[#141416] font-medium">
+                    <Link
+                      href="#"
+                      className="text-sm text-[#141416] font-medium"
+                    >
                       {trending.name}
-                    </span>
+                    </Link>
                     <svg
                       width="16"
                       height="17"
@@ -106,7 +112,7 @@ export const RecommendAccount = ({
                   </span>
                 </div>
               </div>
-              <span className="text-blueDarkPrimary text-sm font-semibold">
+              <span className="cursor-pointer text-blueDarkPrimary text-sm font-semibold">
                 Follow
               </span>
             </div>

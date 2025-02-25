@@ -6,7 +6,6 @@ import {
   SmilePlus,
 } from "lucide-react";
 import React from "react";
-import { Link } from "@/i18n/routing";
 import { OutlineButton } from "../../shared-components";
 
 export const NewContent = () => {
@@ -70,7 +69,7 @@ export const NewContent = () => {
       </div>
 
       {/* New paragraph */}
-      <p className="text-sm text-[#141416] font-medium">
+      <p className="text-sm text-[#141416]">
         Lorem ipsum dolor sit amet consectetur. Vitae ac consectetur odio augue
         nunc integer condimentum gravida. Et nam congue pharetra dolor nullam
         sed leo volutpat. Pellentesque mi eu penatibus nunc nec nunc. Ornare

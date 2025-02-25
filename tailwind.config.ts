@@ -112,9 +112,9 @@ export default {
         shine: "shine var(--duration) infinite linear",
       },
     },
-	  fontFamily: {
-		sf: ["SF Pro Display", "sans-serif"],
-	  }
+    fontFamily: {
+      sf: ["SF Pro Display", "sans-serif"],
+    },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("tailwind-scrollbar")],
 } satisfies Config;

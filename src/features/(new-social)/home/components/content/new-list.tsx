@@ -25,6 +25,7 @@ export const NewList = () => {
             ))}
           </TabsList>
         </Tabs>
+        
         <AdvertisingBanner />
         <Stories />
 
@@ -36,7 +37,9 @@ export const NewList = () => {
             .map((_, index) => (
               <React.Fragment key={index}>
                 <NewCard />
-                <div className="w-full border-b my-4 border-neutral-300" />
+                {index !== 2 && (
+                  <div className="w-full border-b my-4 border-neutral-300" />
+                )}
               </React.Fragment>
             ))}
         </div>

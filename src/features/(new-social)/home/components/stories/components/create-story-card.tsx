@@ -3,7 +3,7 @@ import { PlusIcon } from "lucide-react";
 
 export const CreateStoryCard = () => {
   return (
-    <div className="h-[350px] w-[165px] lg:w-[225px] overflow-hidden rounded-3xl border-2 border-[#007AFF] ">
+    <div className="h-[350px] w-[165px] lg:w-[225px] overflow-hidden rounded-3xl">
       {/* Image */}
       <div className="relative h-full w-full bg-gradient-to-b from-[#A3CEF8] to-[#EAFBFF] ">
         <Image

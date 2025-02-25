@@ -19,7 +19,7 @@ export const CommentItem = () => {
             className="size-6 object-cover"
             loading="lazy"
           />
-          <span className="text-black font-medium">CryptosRUs</span>
+          <span className="text-black font-medium text-sm">CryptosRUs</span>
           <svg
             width="16"
             height="16"
@@ -45,7 +45,7 @@ export const CommentItem = () => {
             </g>
           </svg>
 
-          <span className="text-neutral-400 font-medium">@CryptosRUs</span>
+          <span className="text-[#6D6D6D] text-sm">@CryptosRUs</span>
           <span>
             <svg
               width="3"
@@ -57,12 +57,12 @@ export const CommentItem = () => {
               <circle cx="1.5" cy="2" r="1.5" fill="#D9D9D9" />
             </svg>
           </span>
-          <span className="text-neutral-400">4 hour</span>
+          <span className="text-[#939393] text-xs">4 hour</span>
         </div>
       </div>
 
       {/* New paragraph */}
-      <p className="text-sm text-[#141416] font-medium">
+      <p className="text-sm text-[#141416]">
         Lorem ipsum dolor sit amet consectetur. Vitae ac consectetur odio augue
         nunc integer condimentum gravida.
       </p>
@@ -106,15 +106,15 @@ export const CommentItem = () => {
         </div>
 
         <div className="flex items-center gap-4">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1">
             <MessageSquareMore className="size-4" />
             <span className="text-sm font-medium">0</span>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1">
             <RefreshCcw className="size-4" />
             <span className="text-sm font-medium">0</span>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1">
             <SmilePlus className="size-4" />
             <span className="text-sm font-medium">2</span>
           </div>

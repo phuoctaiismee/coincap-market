@@ -13,15 +13,15 @@ export const StoryCard = ({ type, image, slug }: StoryCardProps) => {
   return (
     <Link
       href={`/story/${slug || "1"}`}
-      className="h-[350px] overflow-hidden rounded-3xl"
+      className="h-[350px] min-w-[10.5rem] overflow-hidden rounded-xl"
     >
-      <div className="relative h-[350px]">
+      <div className="relative h-[350px] min-w-[10.5rem] overflow-hidden rounded-xl">
         {/* Image */}
         <Image
           src={image}
           alt=""
           loading="lazy"
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover rounded-xl"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
         {/* Top */}

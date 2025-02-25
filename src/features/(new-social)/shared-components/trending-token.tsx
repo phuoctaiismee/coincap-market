@@ -1,3 +1,4 @@
+import { Link } from "@/i18n/routing";
 import Image from "next/image";
 import React from "react";
 
@@ -71,7 +72,7 @@ export const TrendingToken = () => {
 
         <div className="grid gap-3">
           {TRENDING?.map((trending, index) => (
-            <div key={trending.id} className="flex items-center gap-6">
+            <Link href="#" key={trending.id} className="flex items-center gap-6">
               <span className="text-sm">{index + 1}</span>
               <div className="flex items-center gap-3">
                 <Image
@@ -86,7 +87,7 @@ export const TrendingToken = () => {
                   {trending.name}
                 </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

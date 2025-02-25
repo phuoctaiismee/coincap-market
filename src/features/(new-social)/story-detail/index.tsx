@@ -12,10 +12,10 @@ const StoryDetailFeature = () => {
   // if (!story) return <div>Story not found</div>;
 
   return (
-    <Bounded className="w-full h-screen">
+    <Bounded className="w-full py-10">
       <div className="w-full grid grid-cols-12 gap-2">
         {/* Navigation */}
-        <div className="w-full col-span-2 border-r border-neutral-300 pr-4">
+        <div className="w-full col-span-3 border-r border-neutral-300 pr-4">
           <div className="w-full flex justify-start items-start flex-col gap-2">
             <Link href="/news" className="flex items-center gap-2 mb-5">
               <svg
@@ -53,9 +53,10 @@ const StoryDetailFeature = () => {
         </div>
 
         {/* Story */}
-        <div className="w-full col-span-6 border-r border-neutral-300 pr-4">
-          <div className="w-full flex justify-start items-start flex-col gap-2">
-            <MainContent />
+        <div className="w-full h-full col-span-5 border-r border-neutral-300 pr-4">
+          <div className="w-full h-full flex justify-start items-start flex-col gap-2">
+            <MainContent src="/assets/videos/5896379-sd_540_960_24fps.mp4" />
+            {/* <MainContent src="/assets/images/socials/5b1a412419229057ead7b585eb75a350.png" /> */}
           </div>
         </div>
 

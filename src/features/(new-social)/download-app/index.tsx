@@ -9,7 +9,7 @@ import { QDownload } from "./components/qr-download";
 
 const QRDownloadFeature = () => {
   return (
-    <Bounded className="w-full">
+    <Bounded className="w-full py-10">
       <div className="w-full grid grid-cols-12 gap-2">
         {/* Left Column with Divider */}
         <div className="w-full col-span-9 border-r border-neutral-300 pr-4">
