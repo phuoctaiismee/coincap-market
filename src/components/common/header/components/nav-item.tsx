@@ -1,7 +1,6 @@
 import { LinkItem } from "@/types/navigations";
 import React from "react";
 import { ChevronDown } from "lucide-react";
-import Link from "next/link";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -9,6 +8,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
+import { Link } from "@/i18n/routing";
 
 const NavItem = ({ href, label, children }: LinkItem) => {
   const hasChildren = children && children.length > 0;

@@ -1,9 +1,10 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import { routing } from "@/i18n/routing";
 import GlobalRootLayout from "@/layouts/root-layout";
-import { getMessages } from "next-intl/server";
-import { headers } from "next/headers";
+import type { Metadata } from "next";
+import { setRequestLocale } from "next-intl/server";
 import localFont from "next/font/local";
+import { headers } from "next/headers";
+import "./globals.css";
 const sf_pro_display = localFont({
   src: [
     {
@@ -59,12 +60,22 @@ export const metadata: Metadata = {
   description: "RTK + Shadcn Core UI",
 };
 
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
 export default async function RootLayout({
   children,
+  params: { locale },
 }: Readonly<{
   children: React.ReactNode;
+  params: { locale: string };
 }>) {
   const headersList = await headers();
+  
+  // Enable static params
+  setRequestLocale(locale);
+  
   return (
     <html
       lang={headersList.get("x-site-locale") ?? "en-US"}

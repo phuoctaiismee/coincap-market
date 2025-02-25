@@ -63,6 +63,7 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        blueDarkPrimary: "#00359E",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -111,6 +112,9 @@ export default {
         shine: "shine var(--duration) infinite linear",
       },
     },
+    fontFamily: {
+      sf: ["SF Pro Display", "sans-serif"],
+    },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("tailwind-scrollbar")],
 } satisfies Config;
