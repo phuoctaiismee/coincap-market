@@ -100,7 +100,7 @@ const TableFinancialReserves = () => {
               <p className="text-sm text-neutral-01 font-medium ">
                 {row.original.token.name}
               </p>
-              <p className="text-xs text-neutral-02 font-normal flex items-center gap-1 text-[#7C7C7C]">
+              <p className="text-xs  font-normal flex items-center gap-1 text-[#7C7C7C]">
                 <svg
                   width="16"
                   height="16"
