@@ -16,6 +16,7 @@ export default {
         "neutral-01": "#000000",
         "neutral-04": "#6D6D6D",
         "neutral-05": "#B1B1B1",
+        "neutral-06": "#E6E6E6",
         "primary-light": "#0077ED",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

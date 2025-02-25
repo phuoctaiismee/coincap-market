@@ -5,6 +5,8 @@ import {
 } from "@/features/exchange";
 import { ExchangeFinacialReservesFeatures } from "@/features/exchange-detail";
 import { ExchangeAboutFeatures } from "@/features/exchange-detail";
+import ExchangeSpotMarketsFeatures from "@/features/exchange-detail/pages/spot-markets";
+import ExchangeTokenAllocationFeatures from "@/features/exchange-detail/pages/token-allocation";
 
 import { notFound, redirect } from "next/navigation";
 import { JSX } from "react";
@@ -32,6 +34,8 @@ const ExchangeDynamicSlugPage = async ({
     // EXCHANGE DETAIL
     about: <ExchangeAboutFeatures />,
     "financial-reserves": <ExchangeFinacialReservesFeatures />,
+    "token-allocation": <ExchangeTokenAllocationFeatures />,
+    "spot-markets": <ExchangeSpotMarketsFeatures />,
   };
 
   const slugPath = slug.slug.join("/");

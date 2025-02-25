@@ -114,4 +114,8 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+  .shadow-primary {
+    @apply shadow-[0px_12px_48px_0px_#0000001F];
+  }
 }
