@@ -4,7 +4,7 @@ import React from "react";
 
 export const QDownload = () => {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="w-full flex flex-col gap-4">
       <div className="text-4xl font-bold text-[#101828]">
         <span className="text-blueDarkPrimary">QR </span>Stream code
       </div>
@@ -35,14 +35,17 @@ export const QDownload = () => {
                 <Image
                   src="/assets/images/socials/logo-horizontal.png"
                   alt="Logo"
+                  loading="lazy"
                 />
                 <Image
                   src="/assets/images/socials/67d6249638f5e932cd1336bd167927d9.png"
                   alt="Logo"
+                  loading="lazy"
                 />
                 <Image
                   src="/assets/images/socials/Frame 22962.png"
                   alt="Logo"
+                  loading="lazy"
                 />
               </div>
             </div>

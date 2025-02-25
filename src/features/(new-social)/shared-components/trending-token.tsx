@@ -39,7 +39,7 @@ export const TrendingToken = () => {
     <div className="w-full bg-gradient-to-b from-[#E5EFF8] to-[#D4EBFF] rounded-xl p-3">
       <div className="flex flex-col gap-3">
         <div className="flex items-center gap-1">
-          <span className="font-semibold text-[#141416] text-base">
+          <span className="font-semibold text-[#141416] text-lg">
             Trending Token
           </span>
           <svg
@@ -81,8 +81,10 @@ export const TrendingToken = () => {
                   height={20}
                   loading="lazy"
                 />
-                <span className="text-sm font-medium">{`${trending.code}`}</span>
-                <span className="text-sm text-neutral-400 font-medium">{trending.name}</span>
+                <span className="text-sm text-[#141416] font-medium">{`${trending.code}`}</span>
+                <span className="text-sm text-[#848484] font-medium">
+                  {trending.name}
+                </span>
               </div>
             </div>
           ))}

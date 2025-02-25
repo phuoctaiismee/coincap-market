@@ -4,7 +4,7 @@ import React from "react";
 import { UpcomingLive } from "../shared-components/upcoming-live";
 import { TrendingTopic } from "../shared-components/trending-topic";
 import { TrendingToken } from "../shared-components/trending-token";
-import { RecommendAccount } from "../shared-components/recommon-account";
+import { RecommendAccount } from "../shared-components/recommended-account";
 import { QDownload } from "./components/qr-download";
 
 const QRDownloadFeature = () => {
@@ -44,7 +44,7 @@ const QRDownloadFeature = () => {
                 Back
               </span>
             </Link>
-            <p className="text-[#6D6D6D] text-base font-semibold">
+            <p className="text-[#6D6D6D] text-[1rem] font-semibold">
               CoinCap.Market supports live viewing on mobile devices, please
               scan the QR code below to download the CoinCap.Market mobile app
               and continue your experience.

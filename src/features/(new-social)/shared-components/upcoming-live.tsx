@@ -1,5 +1,5 @@
+import { Image } from "@/components/common/images";
 import { PrimaryButton } from "@/features/(new-social)/shared-components";
-import Image from "next/image";
 import React from "react";
 
 export const UpcomingLive = () => {
@@ -25,26 +25,24 @@ export const UpcomingLive = () => {
               fill="#F51E1E"
             />
           </svg>
-          <span className="font-bold text-black">Upcoming Lives</span>
+          <span className="font-semibold text-lg text-black">
+            Upcoming Lives
+          </span>
         </div>
 
         <div className="flex flex-col gap-2">
           <div className="w-full flex items-center gap-3 mt-2">
             <div className="w-full rounded-full p-1 bg-white/80">
               <div className="w-full flex items-center gap-1">
-                <div className="aspect-video">
+                <div className="size-5 rounded-full overflow-hidden">
                   <Image
                     src="/assets/images/socials/c0d0d3d9b6872785c0ce67d3bfb2ff11.png"
                     alt="Coin market"
-                    width={20}
-                    height={20}
                     loading="lazy"
-                    className="rounded-full"
+                    className="rounded-full object-cover"
                   />
                 </div>
-                <span className="text-sm font-medium text-[#141416]">
-                  CoinCap.Market
-                </span>
+                <span className="text-xs text-[#141416]">CoinCap.Market</span>
               </div>
             </div>
             <div className="w-full rounded-full p-1 bg-white/80">
@@ -52,13 +50,10 @@ export const UpcomingLive = () => {
                 <Image
                   src="/assets/images/avatar.png"
                   alt="Coin market"
-                  width={20}
-                  height={20}
                   loading="lazy"
+                  className="size-5"
                 />
-                <span className="text-sm font-medium text-[#141416]">
-                  Force Crypto
-                </span>
+                <span className="text-xs text-[#141416]">Force Crypto</span>
               </div>
             </div>
           </div>
@@ -151,14 +146,14 @@ export const UpcomingLive = () => {
                 </g>
               </svg>
 
-              <span className="text-sm font-medium text-black">
-                1383 going
-              </span>
+              <span className="text-sm font-medium text-black">1383 going</span>
             </div>
           </div>
         </div>
 
-        <PrimaryButton className="font-normal">Set reminder</PrimaryButton>
+        <PrimaryButton className="font-medium text-sm">
+          Set reminder
+        </PrimaryButton>
       </div>
     </div>
   );

@@ -55,6 +55,7 @@ export const Stories = () => {
               <StoryCard
                 type={index === 0 ? "live" : "story"}
                 image={story.image}
+                slug={`${index + 1}`}
               />
             </CarouselItem>
           ))}

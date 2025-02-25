@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React from "react";
 
@@ -33,13 +34,24 @@ const ACCOUNTS = [
     image: "/assets/images/avatar.png",
   },
 ];
-export const RecommendAccount = () => {
+export const RecommendAccount = ({
+  title,
+  titleClassName,
+}: {
+  title?: string;
+  titleClassName?: string;
+}) => {
   return (
     <div className="w-full bg-gradient-to-b from-[#E5EFF8] to-[#D4EBFF] rounded-xl p-3">
       <div className="flex flex-col gap-3">
         <div className="flex items-center gap-1">
-          <span className="font-semibold text-[#141416] text-base">
-            Recommended Accounts
+          <span
+            className={cn(
+              "font-semibold text-[#141416] text-lg",
+              titleClassName
+            )}
+          >
+            {title ? title : `Recommended Accounts`}
           </span>
         </div>
 
@@ -61,7 +73,9 @@ export const RecommendAccount = () => {
                 />
                 <div className="flex flex-col gap-0">
                   <div className="flex items-center gap-2">
-                    <span className="text-sm font-medium">{trending.name}</span>
+                    <span className="text-sm text-[#141416] font-medium">
+                      {trending.name}
+                    </span>
                     <svg
                       width="16"
                       height="17"
@@ -87,7 +101,7 @@ export const RecommendAccount = () => {
                       </g>
                     </svg>
                   </div>
-                  <span className="text-neutral-400 text-xs">
+                  <span className="text-[#848484] text-xs">
                     {trending.username}
                   </span>
                 </div>

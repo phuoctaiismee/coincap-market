@@ -1,27 +1,32 @@
-import { Image } from '@/components/common/images';
-import { Check, Eye } from 'lucide-react';
-import React from 'react';
+import { Image } from "@/components/common/images";
+import { Link } from "@/i18n/routing";
+import { Check, Eye } from "lucide-react";
+import React from "react";
 
 type StoryCardProps = {
-  type: 'live' | 'story';
+  type: "live" | "story";
   image: string;
+  slug: string;
 };
 
-export const StoryCard = ({ type, image }: StoryCardProps) => {
+export const StoryCard = ({ type, image, slug }: StoryCardProps) => {
   return (
-    <div className="h-[350px] overflow-hidden rounded-3xl">
+    <Link
+      href={`/story/${slug || "1"}`}
+      className="h-[350px] overflow-hidden rounded-3xl"
+    >
       <div className="relative h-[350px]">
         {/* Image */}
         <Image
           src={image}
           alt=""
-          loading='lazy'
+          loading="lazy"
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
         {/* Top */}
         <div className="absolute left-3 right-3 top-3">
-          {type === 'live' && (
+          {type === "live" && (
             <div className="flex w-full items-center justify-between">
               <div className="flex w-fit items-center gap-1 rounded-md bg-red-500 px-2 py-1">
                 <span className="text-xs font-medium text-white">Live</span>
@@ -33,7 +38,7 @@ export const StoryCard = ({ type, image }: StoryCardProps) => {
             </div>
           )}
 
-          {type === 'story' && (
+          {type === "story" && (
             <div className="w-fit rounded-md bg-neutral-900 px-2 py-1 text-white opacity-50">
               <p className="text-xs text-white">2h ago</p>
             </div>
@@ -45,26 +50,28 @@ export const StoryCard = ({ type, image }: StoryCardProps) => {
           <div className="flex flex-col items-center justify-start gap-3">
             <div className="flex w-full items-center justify-start gap-1">
               <Image
-                src="/logo.png"
+                src="/assets/images/avatar.png"
                 alt="logo"
                 width={20}
                 height={20}
                 className="size-5"
-                loading='lazy'
+                loading="lazy"
               />
               <p className="mt-1 text-xs font-medium text-neutral-100">
-                TONBooking
+                Crypto Rand
               </p>
               <div className="ml-1 mt-1 flex aspect-square size-3 items-center justify-center rounded-full bg-blue-600 p-0.5">
                 <Check className="h-full w-full text-black" />
               </div>
             </div>
             <p className="line-clamp-2 text-xs text-neutral-200">
-              Travel with LALALA and find the best place for you
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Eligendi, consequuntur? Quaerat aspernatur voluptates natus ad et,
+              maiores laboriosam iste consequuntur!
             </p>
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };

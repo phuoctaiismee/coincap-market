@@ -5,7 +5,7 @@ import { NewList } from "./components/content/new-list";
 import { UpcomingLive } from "../shared-components/upcoming-live";
 import { TrendingTopic } from "../shared-components/trending-topic";
 import { TrendingToken } from "../shared-components/trending-token";
-import { RecommendAccount } from "../shared-components/recommon-account";
+import { RecommendAccount } from "../shared-components/recommended-account";
 import Link from "next/link";
 
 const SocialHomeFeatures = () => {

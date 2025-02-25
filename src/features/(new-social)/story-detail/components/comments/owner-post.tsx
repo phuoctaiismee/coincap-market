@@ -7,7 +7,7 @@ import {
 } from "lucide-react";
 import React from "react";
 
-export const CommentItem = () => {
+export const OwnerPost = () => {
   return (
     <div className="w-full flex flex-col gap-4">
       {/* Header */}

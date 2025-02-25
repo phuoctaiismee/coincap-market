@@ -55,7 +55,7 @@ export const TrendingTopic = () => {
               </linearGradient>
             </defs>
           </svg>
-          <span className="font-semibold text-[#141416] text-base">
+          <span className="font-semibold text-[#141416] text-lg">
             Trending Topics
           </span>
           <svg
@@ -88,8 +88,10 @@ export const TrendingTopic = () => {
         <div className="grid gap-3">
           {TRENDING?.map((trending, index) => (
             <div key={trending.id} className="flex items-center gap-6">
-              <span className="text-sm">{index + 1}</span>
-              <span className="text-sm font-medium">{`#${trending.name}`}</span>
+              <span className="text-sm text-[#141416">
+                {index + 1}
+              </span>
+              <span className="text-sm font-medium text-[#141416]">{`#${trending.name}`}</span>
             </div>
           ))}
         </div>
