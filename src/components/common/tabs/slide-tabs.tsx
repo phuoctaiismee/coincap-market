@@ -6,17 +6,21 @@ import { useEffect, useRef, useState } from "react";
 
 interface Tab {
   id: string;
-  label: string;
+  label: React.ReactNode;
 }
 
 interface TabsProps extends React.HTMLAttributes<HTMLDivElement> {
   tabs: Tab[];
   activeTab?: string;
+  itemClassName?: string;
   onTabChange?: (tabId: string) => void;
 }
 
 const SlideTabs = React.forwardRef<HTMLDivElement, TabsProps>(
-  ({ className, tabs, activeTab, onTabChange, ...props }, ref) => {
+  (
+    { className, tabs, activeTab, itemClassName, onTabChange, ...props },
+    ref
+  ) => {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
     const [activeIndex, setActiveIndex] = useState(0);
     const [hoverStyle, setHoverStyle] = useState({});
@@ -71,12 +75,11 @@ const SlideTabs = React.forwardRef<HTMLDivElement, TabsProps>(
           background:
             "linear-gradient(0deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.08)), linear-gradient(156.52deg, rgba(0, 0, 0, 0.4) 2.12%, rgba(0, 0, 0, 0.0001) 39%, rgba(0, 0, 0, 0.0001) 54.33%, rgba(0, 0, 0, 0.1) 93.02%)",
         }}
-        className="p-[1px] h-[35px] rounded-full"
+        className={cn("p-[1px] h-[35px] rounded-full", className)}
       >
         <div
           className={cn(
-            "relative border w-full p-[3px] h-full bg-white rounded-full",
-            className
+            "relative border w-full p-[3px] h-full bg-white rounded-full"
           )}
           {...props}
         >
@@ -110,7 +113,8 @@ const SlideTabs = React.forwardRef<HTMLDivElement, TabsProps>(
                     "px-[24px] cursor-pointer transition-colors duration-300 h-full w-full",
                     index === activeIndex
                       ? "text-white"
-                      : "text-[#0e0f1199] dark:text-[#ffffff99]"
+                      : "text-[#0e0f1199] dark:text-[#ffffff99]",
+                    itemClassName
                   )}
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}

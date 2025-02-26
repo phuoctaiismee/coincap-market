@@ -133,7 +133,7 @@ export function DataTable<TData, TValue>({
                             "py-4 min-h-[48px] pl-6",
                             index === row.getVisibleCells()?.length - 1 &&
                               cn(
-                                "flex justify-end items-center",
+                                "flex justify-center items-center",
                                 lastColumnClassName
                               ),
                             index === 0 && showIndex && "pl-0"
