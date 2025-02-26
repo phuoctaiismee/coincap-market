@@ -1,6 +1,6 @@
 import Bounded from "@/components/common/containers/bounded";
 import FilterActions from "./components/table/filter-actions";
-import TabsList from "./components/table/tabs-list";
+import TabsList from "./components/table/tabs";
 import TokenTables from "./components/table/tokens-table";
 import CryptoCard from "./components/ui/crypto-card ";
 import Heading from "./components/ui/heading";
