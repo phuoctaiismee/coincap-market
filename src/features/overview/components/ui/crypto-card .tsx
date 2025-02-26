@@ -37,7 +37,7 @@ const CryptoCard: React.FC<IProps> = ({
           : "",
       }}
       className={cn(
-        "p-[1px] min-h-[92px] gap-[16px] min-w-[324px] w-fit rounded-full",
+        "p-[1px] min-h-[92px] gap-[16px] min-w-[324px] w-auto rounded-full",
         className
       )}
     >
@@ -55,7 +55,7 @@ const CryptoCard: React.FC<IProps> = ({
             </span>
             <div
               className={cn(
-                "flex gap-[2px] items-center text-15-20-600",
+                "flex gap-[1px] items-center text-15-20-600",
                 isUp ? "text-greenish-04" : "text-red-04"
               )}
             >
@@ -63,7 +63,7 @@ const CryptoCard: React.FC<IProps> = ({
 
               <span>{formatCurrency(changePercent)}%</span>
               <Dot size={20} className="opacity-50" />
-              <div className="flex gap-1">
+              <div className="flex">
                 <span>{isUp ? "+" : "-"}</span>
                 <span>${formatCurrency(changeAmount)}</span>
               </div>

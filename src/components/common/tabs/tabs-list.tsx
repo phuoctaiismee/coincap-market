@@ -1,12 +1,23 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 import { useState } from "react";
 
 const tabs = ["All", "Spot", "Futures", "Favorites", "New Listings"];
 
-const TabsList = () => {
-  const [activeTab, setActiveTab] = useState("All");
+interface ITabItem {
+  name: string;
+  link: string;
+  id: string;
+}
+
+interface IProps {
+  items: ITabItem[];
+}
+
+const TabsList: React.FC<IProps> = ({ items }) => {
+  const [activeTab, setActiveTab] = useState(items[0].id);
 
   const onClick = (tab: string) => {
     setActiveTab(tab);
@@ -14,22 +25,23 @@ const TabsList = () => {
 
   return (
     <div className="flex">
-      {tabs.map((i, index) => (
-        <div
+      {items.map((i) => (
+        <Link
+          href={i.link}
           onClick={() => {
-            onClick(i);
+            onClick(i.id);
           }}
           className={cn(
             "px-[24px] py-[8px] text-16-16-600 text-neutral-05 relative cursor-pointer",
-            i === activeTab && "text-neutral-00 font-[700]"
+            i.id === activeTab && "text-neutral-00 font-[700]"
           )}
-          key={i}
+          key={i.id}
         >
-          {i}
-          {i === activeTab && (
+          {i.name}
+          {i.id === activeTab && (
             <div className="absolute w-full h-[2px] bottom-0 left-0 bg-neutral-01" />
           )}
-        </div>
+        </Link>
       ))}
     </div>
   );

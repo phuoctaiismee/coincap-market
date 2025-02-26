@@ -23,14 +23,17 @@ export default {
         "neutral-05": "#B1B1B1",
         "neutral-06": "#141416",
         "neutral-07": "#7c7c7c",
+        "neutral-08": "#222222",
         "gray-01": "#636363",
         "gray-02": "#b4b4b4",
         "gray-03": "#6d6d6d",
+        "gray-04": "#e6e6e6",
         "blue-primary": "#00359E",
         "blue-dark": "#00359e",
         "greenish-04": "#2DA262",
         "red-04": "#CB3232",
         "primary-light": "#0077ED",
+        "yellow-01": "#FFAD40",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -217,6 +220,46 @@ export default {
         ".text-14-21-600": {
           fontSize: "14px",
           fontWeight: "600",
+          lineHeight: "21px",
+        },
+        ".text-20-18-600": {
+          fontSize: "20px",
+          fontWeight: "600",
+          lineHeight: "18px",
+        },
+        ".text-20-18-500": {
+          fontSize: "20px",
+          fontWeight: "500",
+          lineHeight: "18px",
+        },
+        ".text-16-16-500": {
+          fontSize: "16px",
+          fontWeight: "500",
+          lineHeight: "16px",
+        },
+        ".text-48-62-700": {
+          fontSize: "48px",
+          fontWeight: "700",
+          lineHeight: "62px",
+        },
+        ".text-16-22-500": {
+          fontSize: "16px",
+          fontWeight: "500",
+          lineHeight: "22px",
+        },
+        ".text-12-20-500": {
+          fontSize: "12px",
+          fontWeight: "500",
+          lineHeight: "20px",
+        },
+        ".text-28-28-700": {
+          fontSize: "28px",
+          fontWeight: "700",
+          lineHeight: "28px",
+        },
+        ".text-14-21-400": {
+          fontSize: "14px",
+          fontWeight: "400",
           lineHeight: "21px",
         },
       });

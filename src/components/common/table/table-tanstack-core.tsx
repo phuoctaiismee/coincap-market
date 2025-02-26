@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  ColumnDef,
-  flexRender,
-  getCoreRowModel,
-  useReactTable,
-} from "@tanstack/react-table";
-import { IoMdArrowDropdown } from "react-icons/io";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import {
   Table,
   TableBody,
@@ -16,9 +10,14 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { cn } from "@/lib/utils";
-import { useTranslations } from "next-intl";
-import { Fragment, useState } from "react";
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+import {
+  ColumnDef,
+  flexRender,
+  getCoreRowModel,
+  useReactTable,
+} from "@tanstack/react-table";
+import { useState } from "react";
+import { IoMdArrowDropdown } from "react-icons/io";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -81,7 +80,7 @@ export function DataTable<TData, TValue>({
                         className={cn(
                           "pt-6 pb-3 capitalize text-base whitespace-nowrap text-[#141416] pl-6",
                           index === headerGroup.headers.length - 1 &&
-                            "flex justify-end items-center",
+                            "flex justify-center items-center",
                           index === 0 && showIndex && "pl-0"
                         )}
                         key={header.id}
