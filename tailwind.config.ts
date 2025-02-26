@@ -262,6 +262,21 @@ export default {
           fontWeight: "400",
           lineHeight: "21px",
         },
+        ".text-20-20-700": {
+          fontSize: "20px",
+          fontWeight: "700",
+          lineHeight: "20px",
+        },
+        ".text-18-25-600": {
+          fontSize: "18px",
+          fontWeight: "600",
+          lineHeight: "25px",
+        },
+        ".text-18-27-600": {
+          fontSize: "18px",
+          fontWeight: "600",
+          lineHeight: "27px",
+        },
       });
     },
   ],

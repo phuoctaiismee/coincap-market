@@ -4,7 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   :root {
     --background: 219.9 0% 100%;
@@ -119,5 +118,16 @@
 
   .shadow-primary {
     @apply shadow-[0px_12px_48px_0px_#0000001F];
+  }
+
+  .bg-border-gradient {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.08)),
+      linear-gradient(
+        156.52deg,
+        rgba(0, 0, 0, 0.4) 2.12%,
+        rgba(0, 0, 0, 0.0001) 39%,
+        rgba(0, 0, 0, 0.0001) 54.33%,
+        rgba(0, 0, 0, 0.1) 93.02%
+      );
   }
 }

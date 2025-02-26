@@ -33,13 +33,13 @@ const Tabs = () => {
     },
     {
       name: "NFT on Bitcoin",
-      id: "nft-on-bitcoin",
-      link: getUpdatedPathname("nft-on-bitcoin"),
+      id: "nft-on-token",
+      link: getUpdatedPathname("nft-on-token"),
     },
     {
       name: "Top NFT on Bitcoin",
-      id: "top-nft-on-bitcoin",
-      link: getUpdatedPathname("top-nft-on-bitcoin"),
+      id: "top-nft-on-token",
+      link: getUpdatedPathname("top-nft-on-token"),
     },
     {
       name: "Rewards",

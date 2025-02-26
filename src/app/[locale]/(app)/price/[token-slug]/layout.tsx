@@ -15,7 +15,7 @@ const DetailTokenLayout: React.FC<IProps> = ({ children }) => {
   return (
     <Bounded>
       <div className="py-[48px] flex divide-x divide-neutral-05">
-        <div className="flex-1 pr-[24px] space-y-[36px]">
+        <div className="flex-1 pr-[24px] space-y-[24px]">
           <div className="space-y-[8px]">
             <div className="space-y-[8px] relative">
               <div className="flex items-center gap-[8px]">
