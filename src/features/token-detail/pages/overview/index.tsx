@@ -37,7 +37,9 @@ const OverviewFeature = () => {
           <SlideTabs itemClassName="px-[6px]" tabs={typeChart} />
         </div>
       </div>
-      <CandlestickChart />
+      <div data-lenis-prevent>
+        <CandlestickChart />
+      </div>
     </div>
   );
 };

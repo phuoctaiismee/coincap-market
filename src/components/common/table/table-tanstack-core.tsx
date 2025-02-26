@@ -84,10 +84,7 @@ export function DataTable<TData, TValue>({
                         className={cn(
                           "pt-7 pb-3 capitalize text-base whitespace-nowrap text-[#141416] pl-6",
                           index === headerGroup.headers.length - 1 &&
-                            cn(
-                              "text-right",
-                              lastColumnClassName
-                            ),
+                            cn("text-right", lastColumnClassName),
                           index === 0 && showIndex && "pl-0"
                         )}
                         key={header.id}

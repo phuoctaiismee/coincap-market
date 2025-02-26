@@ -13,9 +13,9 @@ const Navigation = () => {
   return (
     <Bounded className="py-3 lg:py-4 flex justify-between items-center w-full">
       <div className="flex items-center gap-9">
-        <div className="hidden lg:block">
+        {/* <div className="hidden lg:block"> */}
           <SiteLogo />
-        </div>
+        {/* </div> */}
         <div className="lg:hidden">
           <Button variant="ghost" size="icon">
             <Menu />

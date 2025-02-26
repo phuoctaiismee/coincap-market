@@ -1,4 +1,5 @@
 import Overview from "@/features/overview";
+import { routing } from "@/i18n/routing";
 
 export default function Home() {
   return (
