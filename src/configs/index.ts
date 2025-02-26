@@ -3,6 +3,9 @@ import { Label } from "recharts";
 export const API_URL: string =
   process.env.NEXT_PUBLIC_API_URL || "localhost:3000";
 
+export const WEBSITE_HOST_URL: string =
+  process.env.NEXT_PUBLIC_WEBSITE_HOST_URL || "localhost:3000";
+
 export const COMMON_DATA = {
   navigation: [
     {
@@ -225,3 +228,36 @@ export const COMMON_DATA = {
     ],
   },
 };
+
+export const META_DATA = {
+    title:
+      "Coincap.Market - The best crypto market",
+    description:
+      "Coincap.Market is the best crypto market for trading and investing in cryptocurrencies.",
+    image: `${WEBSITE_HOST_URL}/thumbnail.png`,
+    keywords: [
+      "Coincap.Market",
+      "crypto market",
+      "crypto trading",
+      "crypto investing",
+      "crypto news",
+      "crypto analysis",
+      "crypto education",
+      "crypto market",
+    ],
+    og_title: "Coincap.Market - The best crypto market",
+    icon: `${WEBSITE_HOST_URL}/favicon.ico`,
+    og_description:
+      "Coincap.Market is the best crypto market for trading and investing in cryptocurrencies.",
+    twitter_title:
+      "Coincap.Market - The best crypto market",
+    twitter_description:
+      "Discover the future of technology with Coincap.Market. We deliver cutting-edge crypto products, applications, and business solutions for digital transformation.",
+  };
+  
+  export const ROUTES = {
+    HOME: "",
+    NEWS: "news",
+    NEWS_DETAIL: "news/:slug",
+  };
+  

@@ -1,17 +1,13 @@
-import { Button } from "@/components/ui/button";
-import { LucideColumns3, SlidersVertical } from "lucide-react";
 
+import FillterInfomation from "./filter-info";
+import FilterCatefory from "./filter-category";
+import FilterColumn from "./filter-column";
 const FilterActions = () => {
   return (
     <div className="flex gap-[8px]">
-      <Button variant={"border"}>
-        <SlidersVertical />
-        Filters
-      </Button>
-      <Button variant={"border"}>
-        <LucideColumns3 />
-        Columns
-      </Button>
+      <FilterCatefory />
+      <FillterInfomation />
+      <FilterColumn />
     </div>
   );
 };

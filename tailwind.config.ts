@@ -21,10 +21,12 @@ export default {
         "neutral-03": "#464646",
         "neutral-04": "#6d6d6d",
         "neutral-05": "#B1B1B1",
-        "neutral-06": "#141416",
+        "neutral-06": "#E6E6E6",
         "neutral-07": "#7c7c7c",
+        "neutral-09": "#FFFFFF",
         "gray-01": "#636363",
         "gray-02": "#b4b4b4",
+        "vision-pro-bg": "#B4B4B44D",
         "gray-03": "#6d6d6d",
         "blue-primary": "#00359E",
         "blue-dark": "#00359e",
@@ -118,10 +120,22 @@ export default {
             height: "0",
           },
         },
+        shine: {
+          "0%": {
+            "background-position": "0% 0%",
+          },
+          "50%": {
+            "background-position": "100% 100%",
+          },
+          to: {
+            "background-position": "0% 0%",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        shine: "shine var(--duration) infinite linear",
       },
     },
     fontFamily: {
