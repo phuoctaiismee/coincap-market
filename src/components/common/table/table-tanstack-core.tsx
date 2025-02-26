@@ -61,7 +61,9 @@ export function DataTable<TData, TValue>({
         {/* ScrollArea chỉ xử lý scroll, không ảnh hưởng đến shadow */}
         <ScrollArea
           type="always"
-          className="relative rounded-3xl bg-transparent pb-12"
+          className={cn("relative rounded-3xl bg-transparent", {
+            "pb-12": showScrollBar,
+          })}
         >
           <div className="overflow-auto rounded-3xl bg-white relative z-10">
             <Table className="bg-transparent">
