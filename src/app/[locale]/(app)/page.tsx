@@ -1,8 +1,5 @@
-import { routing } from "@/i18n/routing";
 import Overview from "@/features/overview";
-type Props = {
-  params: Promise<{ locale: string }>;
-};
+
 export default function Home() {
   return (
     <main className="w-full">

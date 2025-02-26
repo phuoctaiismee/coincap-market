@@ -1,10 +1,10 @@
 "use client";
 
 import bitcoinIcon from "@/assets/icons/bitcoin-icon.svg";
-import miniChart from "@/assets/images/mini-chart.svg";
 import { Progress } from "@/components/ui/progress";
 import { ColumnDef } from "@tanstack/react-table";
 import Image from "next/image";
+import { Line, LineChart } from "recharts";
 import UpDownNumber from "../ui/up-down-number";
 import PopupActions from "./popup-actions";
 
@@ -75,7 +75,7 @@ export const tokenColumns: ColumnDef<any>[] = [
     header: "Circulating",
     cell: ({ row }) => {
       return (
-        <div className="space-y-[6px]">
+        <div className="space-y-[6px] w-fit">
           <div className="text-14-18-600">$40,000</div>
           <Progress value={33} className="h-[6px] w-[171px]" />
         </div>
@@ -86,9 +86,25 @@ export const tokenColumns: ColumnDef<any>[] = [
     accessorKey: "last7Days",
     header: "Last 7 Days",
     cell: ({ row }) => {
+      const red_chart = {
+        status: Math.random() > 0.5 ? "up" : "down",
+        data: Array.from({ length: 10 }, (_, i) => ({
+          date: `2024-01-${String(i + 1).padStart(2, "0")}`,
+          volume: Math.floor(Math.random() * 150) + 1,
+        })),
+      };
+
       return (
         <div className="flex items-center gap-[8px]">
-          <Image src={miniChart} alt="chart" width={100} height={40} />
+          <LineChart width={120} height={50} data={red_chart.data}>
+            <Line
+              dataKey="volume"
+              type="monotone"
+              stroke={red_chart.status === "down" ? "#E53E3E" : "#00C49F"}
+              strokeWidth={2}
+              dot={false}
+            />
+          </LineChart>
           <PopupActions />
         </div>
       );

@@ -26,6 +26,7 @@ interface DataTableProps<TData, TValue> {
   showIndex?: boolean;
   showScrollBar?: boolean;
   currentSelectedIds?: string[];
+  lastColumnClassName?: string;
   onClickRow?: (row: TData) => void;
   handleDelete?: (id: string) => void;
   handleSetSelectedIds?: (ids: string[]) => void;
@@ -35,9 +36,10 @@ export function DataTable<TData, TValue>({
   columns,
   data,
   showHeader = true,
-  onClickRow,
   showIndex = false,
   showScrollBar = false,
+  lastColumnClassName,
+  onClickRow,
 }: DataTableProps<TData, TValue>) {
   const [rowSelection, setRowSelection] = useState({});
 
@@ -82,7 +84,10 @@ export function DataTable<TData, TValue>({
                         className={cn(
                           "pt-7 pb-3 capitalize text-base whitespace-nowrap text-[#141416] pl-6",
                           index === headerGroup.headers.length - 1 &&
-                            "text-right",
+                            cn(
+                              "text-right",
+                              lastColumnClassName
+                            ),
                           index === 0 && showIndex && "pl-0"
                         )}
                         key={header.id}
@@ -127,7 +132,10 @@ export function DataTable<TData, TValue>({
                           className={cn(
                             "py-4 min-h-[48px] pl-6",
                             index === row.getVisibleCells()?.length - 1 &&
-                              "flex justify-end items-center ",
+                              cn(
+                                "flex justify-center items-center",
+                                lastColumnClassName
+                              ),
                             index === 0 && showIndex && "pl-0"
                           )}
                           key={cell.id}

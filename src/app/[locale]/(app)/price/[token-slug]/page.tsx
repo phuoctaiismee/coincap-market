@@ -1,7 +1,7 @@
-import TokenDetailFeature from "@/features/token-detail";
+import OverviewFeature from "@/features/token-detail/pages/overview";
 
 const TokenDetailPage = () => {
-  return <TokenDetailFeature />;
+  return <OverviewFeature />;
 };
 
 export default TokenDetailPage;

@@ -10,7 +10,13 @@ const PopupActions = () => {
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <Button size="icon" variant={"ghost"}>
+        <Button
+          onClick={(e) => {
+            e.stopPropagation();
+          }}
+          size="icon"
+          variant={"ghost"}
+        >
           <Ellipsis />
         </Button>
       </PopoverTrigger>

@@ -3,9 +3,11 @@
 import { Pagination } from "@/components/common/pagination/pagination";
 import PaginationInfo from "@/components/common/pagination/pagination-info";
 import { DataTable } from "@/components/common/table/table-tanstack-core";
+import { useRouter } from "next/navigation";
 import { tokenColumns } from "./tokens-columns";
 
 const TokenTables = () => {
+  const router = useRouter();
   const tokenData = [
     {
       no: 1,
@@ -97,9 +99,17 @@ const TokenTables = () => {
     },
   ];
 
+  const onClickRow = (row: any) => {
+    router.push(`/price/bitcoin`);
+  };
+
   return (
     <div className="space-y-[26px]">
-      <DataTable columns={tokenColumns} data={tokenData} />
+      <DataTable
+        onClickRow={onClickRow}
+        columns={tokenColumns}
+        data={tokenData}
+      />
       <div className="flex items-center justify-between">
         <PaginationInfo currentPage={1} perPage={10} totalItems={6201} />
         <Pagination
