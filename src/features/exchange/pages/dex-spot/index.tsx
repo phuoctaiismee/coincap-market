@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Bounded from "@/components/common/containers/bounded";
 import React from "react";
 import HeadingExchange from "@/features/exchange/components/heading";
@@ -26,7 +26,9 @@ const ExchangeDEXSpotFeatures = () => {
             </div>
           </div>
           <div className="flex justify-between w-full items-center">
-            <TabsExchange />
+            <div className="overflow-x-auto scrollbar-none">
+              <TabsExchange />
+            </div>
             <PaginationInfo currentPage={1} perPage={10} totalItems={6201} />
           </div>
         </div>

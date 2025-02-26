@@ -251,6 +251,21 @@ export const META_DATA = {
 
 export const ROUTES = {
   HOME: "",
+  EXCHANGE_SPOT: "exchange/spot",
+  EXCHANGE_DERIVATIVES: "exchange/derivatives",
+  EXCHANGE_DEX_SPOT: "exchange/dex-spot",
+  EXCHANGE_DEX_DERIVATIVES: "exchange/dex-derivatives",
+  EXCHANGE_LENDING: "exchange/lending",
+
+  //  NEWS
   NEWS: "news",
-  NEWS_DETAIL: "news/:slug",
+
+  //   DOWNLOAD
+  DOWNLOAD: "download",
+
+  //   STORY
+  STORY: "story",
+
+  //  PRICE
+  PRICE: "price",
 };

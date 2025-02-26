@@ -71,7 +71,7 @@ export function DataTable<TData, TValue>({
                 {table?.getHeaderGroups()?.map((headerGroup, index) => (
                   <TableRow key={headerGroup.id}>
                     {showIndex && (
-                      <TableHead className="pt-6 pb-3 pl-8 w-[60px]">
+                      <TableHead className="pt-8 pb-3 pl-7 w-[60px]">
                         <div className="flex items-center text-neutral-900">
                           # <IoMdArrowDropdown className="size-5" />
                         </div>
@@ -80,9 +80,9 @@ export function DataTable<TData, TValue>({
                     {headerGroup.headers?.map((header, index) => (
                       <TableHead
                         className={cn(
-                          "pt-6 pb-3 capitalize text-base whitespace-nowrap text-[#141416] pl-6",
+                          "pt-7 pb-3 capitalize text-base whitespace-nowrap text-[#141416] pl-6",
                           index === headerGroup.headers.length - 1 &&
-                            "flex justify-center items-center",
+                            "text-right",
                           index === 0 && showIndex && "pl-0"
                         )}
                         key={header.id}

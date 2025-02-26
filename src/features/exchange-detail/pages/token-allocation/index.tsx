@@ -13,7 +13,7 @@ const ExchangeTokenAllocationFeatures = () => {
         <TabsExchangeDetail />
         <ExchangeTokenAllocationContent />
       </div>
-      <div className="flex flex-col gap-6 max-w-[336px] w-full px-6">
+      <div className="hidden lg:flex flex-col gap-6 max-w-[336px] w-full px-6">
         <NewFeedExchange />
       </div>
     </Bounded>
