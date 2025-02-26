@@ -21,7 +21,7 @@ const TabLink = ({ tabs, className }: TabLinkProps) => {
           href={tab.href}
           key={tab.href}
           className={cn(
-            "px-6 py-1  border-b-2 border-transparent text-neutral-05 transition-all duration-300",
+            "px-6 py-1 whitespace-nowrap  border-b-2 border-transparent text-neutral-05 transition-all duration-300",
             pathname === tab.href &&
               "border-neutral-01 font-semibold text-neutral-01"
           )}

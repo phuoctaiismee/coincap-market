@@ -6,7 +6,7 @@ const SiteHeader = () => {
   return (
     <>
       <div
-        className="w-full h-10 flex items-center justify-between"
+        className="hidden w-full h-10 lg:flex items-center justify-between"
         style={{
           backgroundImage: `url(/images/bg-header.png)`,
           backgroundSize: "cover",

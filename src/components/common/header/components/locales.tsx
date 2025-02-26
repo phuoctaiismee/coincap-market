@@ -21,9 +21,9 @@ const LocalesSwitcher = ({ defaultValue, label }: Props) => {
       <DropdownMenuTrigger asChild>
         <Button
           variant="ghost"
-          className="text-white hover:text-white hover:bg-transparent focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0"
+          className="lg:text-white lg:hover:text-white hover:bg-transparent focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 text-xs  p-0 lg:px-2 lg:py-1 font-normal"
         >
-          <div className="aspect-[0.25] relative w-[24px] h-[16px]">
+          <div className="hidden lg:block aspect-[0.25] relative w-[24px] h-[16px]">
             <Image
               src={`https://flagsapi.com/${
                 defaultValue === "en" ? "US" : "VN"

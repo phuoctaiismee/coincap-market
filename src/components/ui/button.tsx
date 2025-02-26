@@ -22,15 +22,20 @@ const buttonVariants = cva(
           "bg-white rounded-full text-12-18-600 text-gray-01 py-[3px] px-[24px] min-h-[34px]",
       },
       size: {
-        default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
+        default: "h-10 px-[28px] py-[12px] min-h-[42px]",
+        sm: "h-[34px] min-h-[34px]",
         lg: "h-11 rounded-md px-8",
         icon: "h-10 w-10",
+      },
+      styling: {
+        default: "",
+        rounded: "rounded-full",
       },
     },
     defaultVariants: {
       variant: "default",
       size: "default",
+      styling: "default",
     },
   }
 );
@@ -42,7 +47,7 @@ export interface ButtonProps
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+  ({ className, variant, size, styling, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
 
     if (variant === "border") {
@@ -56,7 +61,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           className="p-[1px] relative rounded-full w-fit"
         >
           <Comp
-            className={cn(buttonVariants({ variant, size, className }))}
+            className={cn(
+              buttonVariants({ variant, size, styling, className })
+            )}
             ref={ref}
             {...props}
           />
@@ -66,7 +73,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     return (
       <Comp
-        className={cn(buttonVariants({ variant, size, className }))}
+        className={cn(buttonVariants({ variant, size, styling, className }))}
         ref={ref}
         {...props}
       />

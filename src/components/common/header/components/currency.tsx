@@ -12,7 +12,7 @@ const Currency = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" className="text-white hover:text-white hover:bg-transparent focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0">
+        <Button variant="ghost" className="lg:text-white lg:hover:text-white hover:bg-transparent focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0  text-xs p-0 lg:px-2 lg:py-1 font-normal">
           USD
           <ChevronDown className="w-4 h-4 fill-current" />
         </Button>

@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  ColumnDef,
-  flexRender,
-  getCoreRowModel,
-  useReactTable,
-} from "@tanstack/react-table";
-import { IoMdArrowDropdown } from "react-icons/io";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import {
   Table,
   TableBody,
@@ -16,9 +10,14 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { cn } from "@/lib/utils";
-import { useTranslations } from "next-intl";
-import { Fragment, useState } from "react";
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+import {
+  ColumnDef,
+  flexRender,
+  getCoreRowModel,
+  useReactTable,
+} from "@tanstack/react-table";
+import { useState } from "react";
+import { IoMdArrowDropdown } from "react-icons/io";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -27,6 +26,7 @@ interface DataTableProps<TData, TValue> {
   showIndex?: boolean;
   showScrollBar?: boolean;
   currentSelectedIds?: string[];
+  lastColumnClassName?: string;
   onClickRow?: (row: TData) => void;
   handleDelete?: (id: string) => void;
   handleSetSelectedIds?: (ids: string[]) => void;
@@ -36,9 +36,10 @@ export function DataTable<TData, TValue>({
   columns,
   data,
   showHeader = true,
-  onClickRow,
   showIndex = false,
   showScrollBar = false,
+  lastColumnClassName,
+  onClickRow,
 }: DataTableProps<TData, TValue>) {
   const [rowSelection, setRowSelection] = useState({});
 
@@ -62,7 +63,9 @@ export function DataTable<TData, TValue>({
         {/* ScrollArea chỉ xử lý scroll, không ảnh hưởng đến shadow */}
         <ScrollArea
           type="always"
-          className="relative rounded-3xl bg-transparent pb-12"
+          className={cn("relative rounded-3xl bg-transparent", {
+            "pb-12": showScrollBar,
+          })}
         >
           <div className="overflow-auto rounded-3xl bg-white relative z-10">
             <Table className="bg-transparent">
@@ -70,7 +73,7 @@ export function DataTable<TData, TValue>({
                 {table?.getHeaderGroups()?.map((headerGroup, index) => (
                   <TableRow key={headerGroup.id}>
                     {showIndex && (
-                      <TableHead className="pt-6 pb-3 pl-8 w-[60px]">
+                      <TableHead className="pt-8 pb-3 pl-7 w-[60px]">
                         <div className="flex items-center text-neutral-900">
                           # <IoMdArrowDropdown className="size-5" />
                         </div>
@@ -79,9 +82,9 @@ export function DataTable<TData, TValue>({
                     {headerGroup.headers?.map((header, index) => (
                       <TableHead
                         className={cn(
-                          "pt-6 pb-3 capitalize text-base whitespace-nowrap text-[#141416] pl-6",
+                          "pt-7 pb-3 capitalize text-base whitespace-nowrap text-[#141416] pl-6",
                           index === headerGroup.headers.length - 1 &&
-                            "flex justify-end items-center",
+                            cn("text-right", lastColumnClassName),
                           index === 0 && showIndex && "pl-0"
                         )}
                         key={header.id}
@@ -126,7 +129,10 @@ export function DataTable<TData, TValue>({
                           className={cn(
                             "py-4 min-h-[48px] pl-6",
                             index === row.getVisibleCells()?.length - 1 &&
-                              "flex justify-end items-center ",
+                              cn(
+                                "flex justify-center items-center",
+                                lastColumnClassName
+                              ),
                             index === 0 && showIndex && "pl-0"
                           )}
                           key={cell.id}

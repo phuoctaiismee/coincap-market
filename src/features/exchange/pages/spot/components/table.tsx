@@ -5,8 +5,9 @@ import { ColumnDef } from "@tanstack/react-table";
 import Image from "next/image";
 import { BiInfoCircle } from "react-icons/bi";
 import { Line, LineChart } from "recharts";
-
+import { useRouter } from "next/navigation";
 const TableSpot = () => {
+  const router = useRouter();
   const data = [
     {
       crypto: {
@@ -179,7 +180,16 @@ const TableSpot = () => {
     },
   ];
 
-  return <DataTable columns={columns} data={data} showIndex />;
+  return (
+    <DataTable
+      columns={columns}
+      data={data}
+      showIndex
+      onClickRow={(row) => {
+        router.push(`/exchange/${row.crypto.name}`);
+      }}
+    />
+  );
 };
 
 export default TableSpot;

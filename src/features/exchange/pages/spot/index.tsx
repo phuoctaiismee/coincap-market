@@ -25,11 +25,20 @@ const ExchangeSpotFeatures = () => {
             </div>
           </div>
           <div className="flex justify-between w-full items-center">
-            <TabsExchange />
-            <PaginationInfo currentPage={1} perPage={10} totalItems={6201} />
+            <div className="overflow-x-auto scrollbar-none">
+              <TabsExchange />
+            </div>
+            <div className="hidden lg:block">
+              <PaginationInfo currentPage={1} perPage={10} totalItems={6201} />
+            </div>
           </div>
         </div>
         <TableSpot />
+
+        <div className="block lg:hidden">
+          <PaginationInfo currentPage={1} perPage={10} totalItems={6201} />
+        </div>
+
         <Pagination
           page={1}
           totalPages={10}

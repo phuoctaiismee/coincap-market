@@ -21,16 +21,21 @@ export default {
         "neutral-03": "#464646",
         "neutral-04": "#6d6d6d",
         "neutral-05": "#B1B1B1",
-        "neutral-06": "#141416",
+        "neutral-06": "#E6E6E6",
         "neutral-07": "#7c7c7c",
+        "neutral-08": "#222222",
+        "neutral-09": "#FFFFFF",
         "gray-01": "#636363",
         "gray-02": "#b4b4b4",
+        "vision-pro-bg": "#B4B4B44D",
         "gray-03": "#6d6d6d",
+        "gray-04": "#e6e6e6",
         "blue-primary": "#00359E",
         "blue-dark": "#00359e",
         "greenish-04": "#2DA262",
         "red-04": "#CB3232",
         "primary-light": "#0077ED",
+        "yellow-01": "#FFAD40",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -118,10 +123,22 @@ export default {
             height: "0",
           },
         },
+        shine: {
+          "0%": {
+            "background-position": "0% 0%",
+          },
+          "50%": {
+            "background-position": "100% 100%",
+          },
+          to: {
+            "background-position": "0% 0%",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        shine: "shine var(--duration) infinite linear",
       },
     },
     fontFamily: {
@@ -218,6 +235,61 @@ export default {
           fontSize: "14px",
           fontWeight: "600",
           lineHeight: "21px",
+        },
+        ".text-20-18-600": {
+          fontSize: "20px",
+          fontWeight: "600",
+          lineHeight: "18px",
+        },
+        ".text-20-18-500": {
+          fontSize: "20px",
+          fontWeight: "500",
+          lineHeight: "18px",
+        },
+        ".text-16-16-500": {
+          fontSize: "16px",
+          fontWeight: "500",
+          lineHeight: "16px",
+        },
+        ".text-48-62-700": {
+          fontSize: "48px",
+          fontWeight: "700",
+          lineHeight: "62px",
+        },
+        ".text-16-22-500": {
+          fontSize: "16px",
+          fontWeight: "500",
+          lineHeight: "22px",
+        },
+        ".text-12-20-500": {
+          fontSize: "12px",
+          fontWeight: "500",
+          lineHeight: "20px",
+        },
+        ".text-28-28-700": {
+          fontSize: "28px",
+          fontWeight: "700",
+          lineHeight: "28px",
+        },
+        ".text-14-21-400": {
+          fontSize: "14px",
+          fontWeight: "400",
+          lineHeight: "21px",
+        },
+        ".text-20-20-700": {
+          fontSize: "20px",
+          fontWeight: "700",
+          lineHeight: "20px",
+        },
+        ".text-18-25-600": {
+          fontSize: "18px",
+          fontWeight: "600",
+          lineHeight: "25px",
+        },
+        ".text-18-27-600": {
+          fontSize: "18px",
+          fontWeight: "600",
+          lineHeight: "27px",
         },
       });
     },
